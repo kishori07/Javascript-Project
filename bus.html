@@ -1,0 +1,377 @@
+<html>
+
+<head>
+    <title>My PAge</title>
+</head>
+<style>
+    body {
+        background-image: url("bus.jpg");
+        padding: 0;
+        margin: 0;
+        background-position: cover;
+
+    }
+
+    #header {
+        position: fixed;
+        top: 20px;
+        left: 360px;
+
+        height: 40px;
+        width: 200px;
+    }
+
+    .font {
+        font-size: 40px;
+        font-weight: bolder;
+    }
+
+    #bus {
+        height: 500px;
+        width: 300px;
+        border-radius: 15px;
+        border: 2px solid #000;
+        position: fixed;
+        top: 100px;
+        left: 50px;
+
+    }
+
+    #select {
+        width: 180px;
+        height: 40px;
+        margin: 10px;
+        margin-left: 70px;
+
+    }
+
+    .font1 {
+        font-size: 35px;
+        color: #000;
+    }
+
+    #booking {
+        height: 320px;
+        width: 430px;
+        border-radius: 15px;
+        border: 2px solid #000;
+        position: fixed;
+        top: 100px;
+        left: 420px;
+    }
+
+    #bookentry {
+        height: 40px;
+        width: 280px;
+        margin: 10px;
+        margin-left: 100px;
+    }
+
+    #entry {
+        margin: 20px;
+        height: 180px;
+        width: 340px;
+        margin-left: 60px;
+    }
+
+    .font2 {
+        font-size: 34px;
+        color: #000;
+    }
+
+    #row1 {
+        height: 440px;
+        width: 140px;
+        margin: 5px;
+        margin-left: 15px;
+    }
+
+    #row2 {
+        height: 440px;
+        width: 140px;
+        margin: 5px;
+        margin-top: 0;
+        float: right;
+    }
+
+    .font3 {
+        font-size: 20px;
+
+    }
+
+    .font4 {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    #seat1 {
+        height: 50px;
+        width: 50px;
+        border-radius: 10px;
+        border: 1px solid #000;
+        margin: 5px;
+        float: left;
+    }
+
+    #seat2 {
+        height: 50px;
+        width: 50px;
+        border-radius: 10px;
+        border: 1px solid #000;
+        margin: 5px;
+        float: left;
+    }
+
+    #book1 {
+        margin-left: 120px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .sele {
+        width: 200px;
+        margin-left: 60px;
+        font-size: 20px;
+        font-weight: bold;
+
+    }
+
+    .i3 {
+        height: 40px;
+        width: 40px;
+        margin: 5px;
+        border-radius: 7px;
+        font-size: 25px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    #box1 {
+        height: 500px;
+        width: 400px;
+        border-radius: 15px;
+        border: 2px solid #000;
+        position: fixed;
+        top: 100px;
+        left: 920px;
+
+    }
+
+    #box2 {
+        height: 400px;
+        width: 390px;
+        position: fixed;
+        top: 160px;
+        left: 930px;
+    }
+
+    #seats {
+        visibility: hidden;
+    }
+
+    #mask {
+        background-color: #000;
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+        position: absolute;
+        z-index: 999;
+        visibility: hidden;
+    }
+
+    #welcome {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    #recipt {
+        width: 300px;
+        height: 400px;
+        border-radius: 5px solid #ccc;
+        position: fixed;
+        top: 200px;
+        left: 550px;
+
+    }
+</style>
+
+<body>
+
+    <div id="mask">
+        <div id="recipt">
+            <div id="inside">YOUR SEAT IS RESERVED</div>
+        </div>
+    </div>
+    <div id="header" class="font"> RED BUS</div>
+    <div id="bus">
+        <div id="select" class="font1"> Select Seat</div>
+        <div id="seats">
+            <div id="row2">
+                <div id="seat2"><button id="id1" class="i3" onclick="seat(this)" value="3">3</button></div>
+                <div id="seat2"><button class="i3" onclick="seat(this)" value="4">4</button></div>
+                <div id="seat2"><button class="i3" onclick="seat(this)" value="7">7</button></div>
+                <div id="seat2"><button class="i3" onclick="seat(this)" value="8">8</button></div>
+                <div id="seat2"><button class="i3" onclick="seat(this)" value="11">11</button></div>
+                <div id="seat2"><button class="i3" onclick="seat(this)" value="12">12</button></div>
+                <div id="seat2"><button class="i3" onclick="seat(this)" value="15">15</button></div>
+                <div id="seat2"><button class="i3" onclick="seat(this)" value="16">16</button></div>
+                <div id="seat2"><button class="i3" onclick="seat(this)" value="19">19</button></div>
+                <div id="seat2"><button class="i3" onclick="seat(this)" value="20">20</button></div>
+                <div id="seat2"><button class="i3" onclick="seat(this)" value="23">23</button></div>
+                <div id="seat2"><button class="i3" onclick="seat(this)" value="24">24</button></div>
+                <div id="seat2"><button class="i3" onclick="seat(this)" value="27">27</button></div>
+                <div id="seat2"><button class="i3" onclick="seat(this)" value="28">28</button></div>
+
+
+            </div>
+            <div id="row1">
+                <div id="seat1"><button class="i3" onclick="seat(this)" value="1">1</button></div>
+                <div id="seat1"><button class="i3" onclick="seat(this)" value="2">2</button></div>
+                <div id="seat1"><button class="i3" onclick="seat(this)" value="5">5</button></div>
+                <div id="seat1"><button class="i3" onclick="seat(this)" value="6">6</button></div>
+                <div id="seat1"><button class="i3" onclick="seat(this)" value="9">9</button></div>
+                <div id="seat1"><button class="i3" onclick="seat(this)" value="10">10</button></div>
+                <div id="seat1"><button class="i3" onclick="seat(this)" value="13">13</button></div>
+                <div id="seat1"><button class="i3" onclick="seat(this)" value="14">14</button></div>
+                <div id="seat1"><button class="i3" onclick="seat(this)" value="17">17</button></div>
+                <div id="seat1"><button class="i3" onclick="seat(this)" value="18">18</button></div>
+                <div id="seat1"><button class="i3" onclick="seat(this)" value="21">21</button></div>
+                <div id="seat1"><button class="i3" onclick="seat(this)" value="22">22</button></div>
+                <div id="seat1"><button class="i3" onclick="seat(this)" value="25">25</button></div>
+                <div id="seat1"><button class="i3" onclick="seat(this)" value="26">26</button></div>
+            </div>
+
+        </div>
+    </div>
+    <div id="mask"></div>
+    <div id="booking">
+
+        <div id="bookentry" class="font2"> Personal Details</div>
+
+        <div id="entry" class="font3">ENTER NAME <input type="text" placeholder="Your Name" id="nm">
+            <br>
+            <br>
+            AGE <input type="text" id="age" placeholder="Your Age">
+            <br>
+            <br>
+            <button onclick="selection()" class="sele">SELECT SEAT</button>
+            <br>
+            <br>
+            GENDER<input type="radio" name="gender" id="r1" value="male" onclick="gen(this)">Male
+            <input type="radio" name="gender" id="r2" value="female" onclick="gen(this)">Female
+            <br>
+            <p id="out"></p>
+
+
+            <button onclick="reserve()" id="book1">BOOK</button>
+
+        </div>
+
+    </div>
+    <div id="box1">
+        <div class="font4"> Booking Details</div>
+        <div id="box2"></div>
+
+        <hr>
+    </div>
+
+</body>
+
+</html>
+<script>
+    var a = [];
+    var b = [];
+    var c = [];
+    var d = [];
+
+
+
+    function table() {
+
+
+        var s = "<table border='1' cellspacing='0' cellpadding='1'>";
+        s = s + "<tr><th>NAME </th><th>AGE</th><th>SEAT NO.</th><th>GENDER</th><th>STATUS</th><th>check</th></tr>";
+        for (i = 0; i < a.length; i++) {
+
+            s = s + "<tr><td>" + a[i] + "</td>  <td>" + b[i] + "</td>  <td>" + c[i] + "</td> <td>" + d[i] + "</td> <td><button onclick='booked(" + i + ")'>Booked</button></td><td><button onclick='remove(" + i + ")'> X </button></td></tr>";
+        }
+        s = s + "</table>";
+        document.getElementById("box2").innerHTML = s;
+    }
+    function gen(g) {
+        h = g.value;
+
+
+        if (h == "female") {
+            v.style.backgroundColor = "#ff0000";
+
+        }
+        else if (h == "male") {
+            v.style.backgroundColor = "#0000ff";
+
+        }
+
+    }
+    function reserve() {
+        l = document.getElementById("nm");
+        m = document.getElementById("age");
+        if (l.value.length == 0 && m.value.length == 0) {
+            alert("missing");
+        }
+        else if (l.value == "") {
+            alert("name");
+        }
+        else if (m.value == "") {
+            alert("age");
+        }
+        else {
+            a.push(l.value);
+            b.push(m.value);
+            c.push(v.value);
+            d.push(h);
+            table()
+        }
+        cl()
+    }
+        function booked() {
+
+        }
+        function selection() {
+            document.getElementById("seats").style.visibility = 'visible';
+        }
+
+        function seat(s) {
+            v = s;
+            gen(h)
+            p = document.getElementById("out");
+
+            if (h == "female") {
+                s.style.backgroundColor = "#ff0000";
+
+            }
+            else if (h == "male") {
+                s.style.backgroundColor = "#0000ff";
+
+            }
+
+        }
+        function cl() {
+            document.getElementById("nm").value = " ";
+            document.getElementById("age").value = " ";
+
+
+        }
+
+        function remove(i) {
+
+            a.splice(i, 1);
+            b.splice(i, 1);
+            c.splice(i, 1);
+            d.splice(i, 1);
+
+
+            table()
+        }
+
+</script>

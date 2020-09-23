@@ -1,0 +1,108 @@
+<html><head><title>Document</title>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+     $(document).ready(function(e){
+        $(".txt").click(function (){
+            
+        t=$(this).val();
+       console.log(t);
+      s= $("#screen").val($("#screen").val()+t);
+        
+        });
+        $(".del").click(function(){
+            $("#screen").val(""); 
+        });
+        $(".equal").click(function(){
+            $("#screen").val(eval($("#screen").val()));
+        }); 
+     });
+    </script>
+    </head>
+    <style>
+        #box{
+            width:320px;
+            height:460px;
+            position: fixed;
+            top:60px;
+            left:400px;
+            background-color:cadetblue;
+        }
+        
+        button{
+            width:60px;
+            height:50px;
+            margin:6px;
+            background-color: darkcyan;
+            color:aliceblue;
+            font-size: 20px; 
+        }
+        #box1{
+            position: fixed;
+            top:190px;
+            left:407px;
+           
+            height:320px ;
+            width:300px;
+
+        }
+        #clear{
+        width:210px;
+        height:50px;
+        margin:7px;
+        background-color: darkcyan;
+        color:aliceblue;
+            font-size: 20px;  
+        }
+        #screen{
+            width:300px;
+            height:80px;
+            border-radius: 5px;
+            border:1px solid #000;
+            margin:7px;
+            margin-top: 5px;
+            float: left;
+            background-color: cornsilk;
+            font-size:35px ;
+            text-align:right;
+
+        }
+        #cal{
+            width:100px;
+            height:20px;
+            border:1px solid #000;
+            float:right;
+            margin:7px;
+        }
+    </style>
+    <body>
+       <div id="box">
+           
+           <div id="cal"></div>
+           <input type="text" id="screen" value=''>
+           <input type="hidden" id="operation" value=''>
+
+           <div id="box1">
+       <button  class="txt" value="0">ON</button>
+       <button  class="del" >DEL</button>
+       <button  class="equal" value="">=</button>
+       <button  class="txt" value="*">X</button>
+       <button  class="txt" value="7">7</button>
+       <button  class="txt" value="8">8</button>
+       <button  class="txt" value="9">9</button>
+       <button  class="txt" value="/">/</button>
+       <button  class="txt" value="4">4</button>
+       <button  class="txt" value="5">5</button>
+       <button  class="txt" value="6">6</button>
+       <button  class="txt" value="+" >+</button>
+       <button  class="txt" value="1">1</button>
+       <button  class="txt" value="2">2</button>
+       <button  class="txt" value="3">3</button>
+       <button  class="txt" value="-" >-</button>
+       <button id="clear" class="txt"value="0">0</button>
+       <button  class="txt" value="." >.</button>
+
+       </div>
+       </div>
+
+    </body>
+    </html>

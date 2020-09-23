@@ -1,0 +1,123 @@
+<html>
+
+<head>
+    <title> Calculate Age</title>
+</head>
+<style>
+    body {
+        background: linear-gradient(to right, #ccc 0%, rgb(183, 0, 255) 100%)fixed;
+    }
+
+    #cal {
+        width: 400px;
+        height: 400px;
+        position: fixed;
+        left: 500px;
+        top: 150px;
+        border-radius: 15px;
+        border: 1px solid rgb(183, 0, 255);
+    }
+
+    #size {
+        width: 380px;
+        height: 380px;
+        margin-left: 17px;
+        margin-top: 10px;
+    }
+
+    .txt {
+        width: 200px;
+        height: 30px;
+        font-size: 20px;
+        border-radius: 15px;
+        border: 1px solid rgb(183, 0, 255);
+        outline: none;
+        padding-left: 10px;
+    }
+</style>
+
+<body>
+    <div id="cal">
+        <div id="size">
+            <br>
+            <h3> CALCULATE YOUR AGE :</h3>
+            <br>
+            ENTER DATE OF BIRTH <input type="date" class="txt" id="dob">
+            <br>
+            <br>
+            <br>
+            ENTER TODAY'S DATE <input type="date" class="txt" id="today">
+            <br>
+            <br>
+            <br>
+            <button onclick="yourage()">CALCULATE</button>
+            <br>
+            <br>
+            <br>
+            <p id="out"> YOUR AGE IS </p>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    function yourage() {
+        var a = document.getElementById("dob").value;
+        var b = document.getElementById("today").value;
+        var j = document.getElementById("out");
+
+        var s = a.split('-');
+        for (var i of s) {
+            i1 = i;
+            var m = (s[0]);
+
+            var n = parseInt(s[1]);
+
+            var o = parseInt(s[2]);
+        }
+
+
+
+        var p = b.split('-');
+        for (var i of p) {
+            i2 = i;
+
+            var t = (p[0]);
+
+            var u = parseInt(p[1]);
+
+            var v = parseInt(p[2]);
+        }
+
+        var v1;
+        var u1;
+        var q;
+        if (v < o) {
+            v1 = ((v + 31) - o);
+            u = (u - 1);
+
+        }
+        else {
+            v1 = (v - o);
+        }
+        v1 = v1 + "days";
+        if (u < n) {
+            u1 = ((u + 12) - n);
+            t = (t - 1);
+
+        }
+        else {
+            u1 = (u - n);
+        }
+        u1 = u1 + "months";
+
+        if (t > m) {
+            t = (t - m);
+            }
+
+        t = t + "years";
+
+        q = t + u1 + v1;
+        j.innerHTML=q;
+    } 
+</script>
